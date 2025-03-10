@@ -49,8 +49,8 @@ const EnvironmentalMap = () => {
                 setAirData(response.data.data);
                 setLoading(false);
             } catch (error) {
-                console.error('Error fetching air quality data:', error);
-                setError("Error fetching air quality data.");
+                console.error('Error fetching Air Quality Data:', error);
+                setError("Error fetching Air Quality Data");
                 setLoading(false);
             }
         };
@@ -70,30 +70,30 @@ const EnvironmentalMap = () => {
         if (aqi <= 50) {
             return {
                 level: "Good",
-                message: "Air quality is satisfactory, and air pollution poses little or no risk.",
+                message: "Air quality is Satisfactory, and Air Pollution poses little or No Risk.",
                 colorClass: "good",
-                tips: "Enjoy your day! No precautions needed."
+                tips: "Enjoy your Day! No Precautions Needed."
             };
         } else if (aqi <= 100) {
             return {
                 level: "Moderate",
-                message: "Air quality is acceptable. However, there may be a risk for some people.",
+                message: "Air quality is Acceptable. However, there may be a risk for some People.",
                 colorClass: "moderate",
                 tips: "Sensitive groups should limit prolonged outdoor exertion."
             };
         } else if (aqi <= 150) {
             return {
                 level: "Unhealthy for Sensitive Groups",
-                message: "Members of sensitive groups may experience health effects.",
+                message: "Members of Sensitive Groups may experience Health Effects.",
                 colorClass: "unhealthy-sensitive",
-                tips: "Limit outdoor activities for sensitive groups."
+                tips: "Limit Outdoor Activities for Sensitive Groups."
             };
         } else {
             return {
                 level: "Unhealthy",
-                message: "Everyone may begin to experience health effects.",
+                message: "Everyone may begin to experience Health Effects.",
                 colorClass: "unhealthy",
-                tips: "Avoid prolonged outdoor exertion."
+                tips: "Avoid prolonged Outdoor Exertion."
             };
         }
     };
@@ -107,7 +107,7 @@ const EnvironmentalMap = () => {
                 <div className="map-header">
                     <h1>Air Quality Map</h1>
                     {airData && (
-                        <p>Check the air quality index (AQI) in {airData.city}</p>
+                        <p>Check the Air Quality Index (AQI) in {airData.city}</p>
                     )}
                 </div>
 
@@ -150,11 +150,12 @@ const EnvironmentalMap = () => {
                 <div className="pollution-tips">
                     <h2>How to Reduce Air Pollution</h2>
                     <ul>
-                        <li>Reduce Vehicle Use: Use public transportation or carpool</li>
-                        <li>Use Energy Efficient Appliances: Switch to energy-saving devices</li>
-                        <li>Conserve Energy: Turn off unused lights and appliances</li>
-                        <li>Avoid Burning Waste: Properly dispose of waste materials</li>
-                        <li>Plant Trees: Help improve air quality naturally</li>
+                    <li>🚗Reduce Vehicle Use: Use Public Transportation or Carpool</li>
+                    <li>💡Use Energy Efficient Appliances: Switch to Energy-Saving Devices</li>
+                    <li>⚡Conserve Energy: Turn off unused Lights and Appliances</li>
+                    <li>🔥Avoid Burning Waste: Properly dispose of Waste Materials</li>
+                    <li>🌳Plant Trees: Help improve Air Quality Naturally</li>
+
                     </ul>
                 </div>
             </div>

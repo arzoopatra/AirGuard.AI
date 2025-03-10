@@ -93,7 +93,7 @@ const EnvironmentalChat = () => {
         } else if (aqi <= 150) {
             return {
                 level: "Unhealthy for Sensitive Groups",
-                tips: "Children and Elderly should avoid Outdoor Ativities."
+                tips: "Children and Elderly should avoid Outdoor Activities."
             };
         } else {
             return {
@@ -152,7 +152,7 @@ const EnvironmentalChat = () => {
             <Navbar />
             <div className="chat-header">
                 <h1>Environmental Chat</h1>
-                <p>Chat about the environment in {airData?.city || 'your area'}</p>
+                <p>Chat about the Environment in {airData?.city || 'your area'}</p>
             </div>
 
             <div className="chat-box">
@@ -161,7 +161,7 @@ const EnvironmentalChat = () => {
                         <div key={index} className={`message-wrapper ${message.sender}`}>
                             <div className="message-content">
                                 {message.sender === 'model' && (
-                                    <div className="bot-avatar">🌍</div>
+                                    <div className="bot-avatar"></div>
                                 )}
                                 <div className={`message ${message.sender}`}>
                                     {message.text}
